@@ -1,4 +1,4 @@
-baseURL = 'https://b19mud.github.io/blog/'
+baseURL = 'https://b19mud.github.io'
 languageCode = 'en-us'
 title = 'bigmud的博客'
 theme = "ananke"
