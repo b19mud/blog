@@ -74,5 +74,10 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: ${{ secrets.BLOG }}  # 你的个人访问令牌
+          EXTERNAL_REPOSITORY: b19mud/b19mud.github.io  # 你的GitHub Pages仓库
+          PUBLISH_BRANCH: main  # 或者是你的GitHub Pages分支
+          PUBLISH_DIR: ./
+          commit_message: ${{ github.event.head_commit.message }}
